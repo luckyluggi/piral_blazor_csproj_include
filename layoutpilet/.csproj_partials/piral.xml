@@ -1,0 +1,27 @@
+<Project>
+
+	<PropertyGroup>
+		<Version>$(AppVersion)</Version>
+		<ConfigFolder>.piralconfig</ConfigFolder>
+		<OutputFolder>../.piral~</OutputFolder>
+		<PublishFeedUrl>https://some-feed.url</PublishFeedUrl>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="$(AppShell) == 'Local'">
+		<PiralInstance>../my-app/dist/emulator/my-app-1.0.0.tgz</PiralInstance>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="$(AppShell) != 'Local'">
+		<PiralInstance>@org/my-app</PiralInstance>
+		<NpmRegistry>https://some-feed.url</NpmRegistry>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <TypeScriptCompile Include=".piralconfig\setup.tsx" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Content Include=".piralconfig\*" />
+	</ItemGroup>
+	
+</Project>

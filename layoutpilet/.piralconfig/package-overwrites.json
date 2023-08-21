@@ -1,0 +1,7 @@
+{
+  "name": "layoutpilet",
+  "scripts": {
+    "start": "pilet debug ./src/index.tsx ../blazorpilet/src/index.tsx"
+  }
+}
+ 
