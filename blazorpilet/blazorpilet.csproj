@@ -1,19 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
 		<AppShell>Local</AppShell> 
   </PropertyGroup>
 
-	<ItemGroup>
-		<Content Include="../layoutpilet/.csproj_partials/*" />
-	</ItemGroup>
+	<Import Project="../layoutpilet/.csproj_partials/piral.target" />
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" />
-    <PackageReference Include="Piral.Blazor.Utils" Version="7.0.8" />
-    <PackageReference Include="Piral.Blazor.Tools" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.6" />
+    <PackageReference Include="Piral.Blazor.DevServer" Version="8.0.17-pre.20240610.2" />
+    <PackageReference Include="Piral.Blazor.Utils" Version="8.0.17-pre.20240610.2" />
+    <PackageReference Include="Piral.Blazor.Tools" Version="8.0.17-pre.20240610.2" />
   </ItemGroup>
 
   <ItemGroup>
